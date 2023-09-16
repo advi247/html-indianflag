@@ -16,50 +16,52 @@
             align-items: center;
         }
 
+        .main{
+            display: flex;
+            flex-direction: column;
+            width: 900px;
+            border: 5px solid rgb(0, 0, 0);
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .block{
+            flex-basis: 200px;
+        }
+
         .orange{
-            margin: 50px;
-            background-color: rgb(255, 153, 51);
-            height: 600px;
-            width: 900px;
-            border: 5px solid black;
+            background-color: rgb(250, 140, 31);
         }
 
-        .orange>p{
-            color: rgb(0, 0, 0);
-            margin: 0;
-            text-align: center;
-            font-size: 5rem;
+        .white{
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
         }
 
-        .orange>#white{
-            background-color: white;
-            position: absolute;
-            height: 200px;
-            width: 900px;
-            margin-top: 100px;
-            margin-bottom: 200px;
-        }
-
-        #white>img{
-            padding-left: 350px;
+        .white>img{
             height: 200px;
             width: 200px;
         }
 
-        .orange>div{
+        .green{
             background-color: rgb(18, 136, 7);
-            position: absolute;
-            height: 208px;
-            width: 900px;
-            margin-top: 300px;
         }
 
-        .orange div>p{
-            color: white;
-            margin: 0;
-            text-align: center;
-            font-size: 5rem;
-            padding-top: 45px;
+        @media (min-width: 391px) and (max-width: 500px){
+            .main{
+                width: 400px;
+            }
+        }
+        @media (min-width: 500px) and (max-width: 600px){
+            .main{
+                width: 450px;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 750px){
+            .main{
+                width: 680px;
+            }
         }
 
     </style>
@@ -67,15 +69,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="orange">
-            <p>Vande Mataram!</p>
-            <div id="white">
-                <img src="Ashok Chakra.jpg" alt="ashokchakra"/>
-            </div>
-            <div>
-                <p>Bharat Mata ki Jai!</p>
-            </div>
-        </div>     
+        <div class="main">
+            <div class="block orange"></div> 
+            <div class="block white"><img src="Ashok Chakra.jpg"></div>
+            <div class="block green"></div>
+        </div>
     </div>
 </body>
 </html>
